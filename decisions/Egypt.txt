@@ -55,24 +55,39 @@ political_decisions = {
     effect = {
       add_accepted_culture = maghrebi
       MGH = { all_core = { add_core = THIS } }
-			TUN = { all_core = { add_core = THIS } }
+	  TUN = { all_core = { add_core = THIS } }
     }
   }
 
 	egypt_sudan = {
 		potential = {
-			NOT = { has_country_flag = levant_claim }
 			NOT = { has_country_flag = up_the_nile }
 			tag = EGY
 		}
 		allow = {
-		  owns = 1835
-			owns = 1827
+			or = {
+				owns = 1835
+				owns = 1827
+				FUN = {
+					all_core = {
+						OR = {
+							owned_by = THIS
+							owner = {
+								OR = {
+									in_sphere = THIS
+									vassal_of = THIS
+								}
+							}
+							empty = yes
+						} 
+					}
+				}
+			}
 		}
 		effect = {
 		  set_country_flag = up_the_nile
 		  FUN = { all_core = { add_core = THIS } }
-			DAR = { all_core = { add_core = THIS } }
+		  DAR = { all_core = { add_core = THIS } }
 		  add_accepted_culture = nubian
 		  add_accepted_culture = sudanese
 		  add_accepted_culture = teda
@@ -83,6 +98,7 @@ political_decisions = {
 		potential = {
 			tag = EGY
 			has_country_flag = up_the_nile
+			NOT = { has_country_flag = levant_claim }
 			NOT = { has_country_flag = conquered_horn }
 		}
 		allow = {
@@ -146,7 +162,7 @@ political_decisions = {
 			BCH_1 = { add_core = THIS }
 			ENG_2029 = { add_core = THIS }
 			ENG_2039 = { add_core = THIS }
-			add_accepted_culture = oromo
+			add_accepted_culture = oromo # Ethiopian
 			add_accepted_culture = tigray
 			add_accepted_culture = nilotic
 			add_accepted_culture = kikuyu
@@ -156,16 +172,16 @@ political_decisions = {
 
 	egypt_defy_turks = {
 		potential = {
+			NOT = { has_country_flag = defy_turks }
 			has_country_flag = levant_claim
 			tag = EGY
-			NOT = { accepted_culture = khaliji }
 		}
 		allow = {
 			SYR = {
 				all_core = {
-				OR = {
-					owned_by = THIS
-					empty = yes
+						OR = {
+							owned_by = THIS
+							empty = yes
 						}
 					}
 				}

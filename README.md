@@ -10,3 +10,6 @@ Based on [Rileyo's](https://github.com/rileyo92/Divergence-Expanded-MP) multipla
 
 # How To Install
 - Download the repository into the game's "mod" folder and move the .mod file out of the mod's folder into the mod folder adjacent to the mod's directory.
+
+# Changed Mission Trees
+![egypt_to_caliphate](git_images/EGY_to_UAR.png)
