@@ -7,3 +7,6 @@ Based on [Rileyo's](https://github.com/rileyo92/Divergence-Expanded-MP) multipla
 # FAQ's
 **Q:** What infamy does sanctions kick in at? 
 **A:** 32.5 Infamy
+
+# How To Install
+- Download the repository into the game's "mod" folder and move the .mod file out of the mod's folder into the mod folder adjacent to the mod's directory.

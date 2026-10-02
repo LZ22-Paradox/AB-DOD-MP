@@ -1,3 +1,3 @@
-name = "Divergences Expanded 2.3"
-path = "mod/Divergences Expanded 2.3"
-user_dir = "Divergences Expanded 2.3"
+name = "AB-DOD-MP"
+path = "mod/AB-DOD-MP"
+user_dir = "AB-DOD-MP"
