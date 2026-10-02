@@ -73,10 +73,9 @@ political_decisions = {
 		  set_country_flag = up_the_nile
 		  FUN = { all_core = { add_core = THIS } }
 			DAR = { all_core = { add_core = THIS } }
-		  remove_accepted_culture = mashriqi
 		  add_accepted_culture = nubian
 		  add_accepted_culture = sudanese
-			add_accepted_culture = teda
+		  add_accepted_culture = teda
 		}
 	}
 
