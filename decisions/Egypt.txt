@@ -278,9 +278,9 @@ political_decisions = {
 			NOT = { has_country_flag = wadmadani_coal }
 		}
 		allow = {
-			clean_coal = 1
+			puddling = 1
 			invention = machine_tools
-		}
+		} 
 		effect = {
 			1827 = { trade_goods = coal }
 			set_country_flag = wadmadani_coal
@@ -294,7 +294,7 @@ political_decisions = {
 			NOT = { has_country_flag = aswan_iron_mine }
 		}
 		allow = {
-			cheap_iron = 1
+			hot_blast = 1
 			invention = machine_tools
 		}
 		effect = {
