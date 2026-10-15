@@ -819,7 +819,7 @@ political_decisions = {
 		}
 		effect = {
 			749 = { life_rating = 3 }
-			1725 = { life_rating -3 }
+			1725 = { life_rating = -3 }
 			badboy = 1
 			prestige = 15
 			set_country_flag = carthago_delenda_est_ita
