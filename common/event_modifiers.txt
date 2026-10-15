@@ -2612,3 +2612,8 @@ balkans_in_harmony = {
 	global_pop_militancy_modifier = -0.05
 	prestige = 0.01
 }
+
+state_reform_boost = {
+    research_points_modifier = 0.05
+    education_efficiency_modifier = 0.2
+}
