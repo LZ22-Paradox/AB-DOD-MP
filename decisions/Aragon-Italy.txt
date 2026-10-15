@@ -241,4 +241,36 @@ political_decisions = {
 			}
 		}
 	}
+
+	pillars_of_hercules_ari = {
+		picture = tangier_harbor
+		potential = {
+			OR = {
+				tag = ARA
+				tag = ARI
+			}
+			NOT = { has_country_flag = pillars_of_hercules }
+		}
+		allow = {
+			revolution_n_counterrevolution = 1
+		}
+		effect = {
+			506 = { add_core = THIS }
+			507 = { add_core = THIS }
+			508 = { add_core = THIS }
+			515 = { add_core = THIS }
+			513 = { add_core = THIS }
+			516 = { add_core = THIS }
+			514 = { add_core = THIS }
+			517 = { add_core = THIS }
+			2590 = { add_core = THIS }
+			1687 = { add_core = THIS }
+			1686 = { add_core = THIS }
+			1688 = { add_core = THIS }
+			1689 = { add_core = THIS }
+			badboy = 8
+			prestige = 5
+			set_country_flag = pillars_of_hercules
+		}
+	}
 }

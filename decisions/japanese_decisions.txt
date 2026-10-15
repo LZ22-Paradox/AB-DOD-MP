@@ -328,7 +328,7 @@ political_decisions = {
 			revolution_n_counterrevolution = 1
 		}
 		effect = {
-			badboy = 10
+			badboy = 12
 			CHI_1 = { add_core = THIS }
 			CHI_2 = { add_core = THIS }
 			CHI_1614 = { add_core = THIS }
@@ -410,7 +410,7 @@ political_decisions = {
 			revolution_n_counterrevolution = 1
 		}
 		effect = {
-		 badboy = 20
+		 badboy = 25
 		 	JAV = { all_core = { add_core = THIS } }
 			BAL = { all_core = { add_core = THIS } }
 			MKS = { all_core = { add_core = THIS } }
@@ -491,5 +491,40 @@ political_decisions = {
     	factor = 1
       modifier = { factor = 0 badboy = 0.4 }
   	}
+	}
+
+	china_secured_jap = {
+		picture = map_yellow_sea
+		potential = {
+			tag = JAP
+			has_country_flag = conquer_china
+			NOT = { has_country_flag = china_secured }
+		}
+		allow = {
+			OR = {
+				MCK = { all_core = { owned_by = THIS } }
+				AND = {
+					1612 = { owned_by = THIS }
+					1565 = { owned_by = THIS }
+					1617 = { owned_by = THIS }
+					1536 = { owned_by = THIS }
+					1537 = { owned_by = THIS }
+					2221 = { owned_by = THIS }
+					1515 = { owned_by = THIS }
+					1512 = { owned_by = THIS }
+					1510 = { owned_by = THIS }
+					1572 = { owned_by = THIS }
+					1604 = { owned_by = THIS }
+				}
+				AND = {
+					TNG = { all_core = {owned_by = THIS } }
+					MIG = { all_core = {owned_by = THIS } }
+				}
+			}
+		}
+		effect = {
+			prestige = 50
+			
+		}
 	}
 }

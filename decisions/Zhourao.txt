@@ -181,36 +181,74 @@ political_decisions = {
   	}
 	}
 
-timor_purchase = {
-	potential = {
-		tag = GAN
-		NOT = { has_country_flag = gan_timor_purchase }
-		NOT = {
-			BAL_1446 = {
-				OR = {
-					owned_by = BAL
-					owned_by = GAN
-					owned_by = LFG
-					owned_by = NUS
+	timor_purchase = {
+		potential = {
+			tag = GAN
+			NOT = { has_country_flag = gan_timor_purchase }
+			NOT = {
+				BAL_1446 = {
+					OR = {
+						owned_by = BAL
+						owned_by = GAN
+						owned_by = LFG
+						owned_by = NUS
+					}
 				}
 			}
 		}
-	}
-	allow = {
-		money = 200000
-		war = no
-		1446 = {
-	    owner = {
-	      war = no
-	      relation = { who = THIS value = 100 }
-	  	}
+		allow = {
+			money = 200000
+			war = no
+			1446 = {
+			owner = {
+			war = no
+			relation = { who = THIS value = 100 }
+			}
+			}
+		}
+		effect = {
+			set_country_flag = gan_timor_purchase
+			1446 = {
+		owner = { country_event = 500031 }
+		}
 		}
 	}
-	effect = {
-		set_country_flag = gan_timor_purchase
-		1446 = {
-      owner = { country_event = 500031 }
-    }
+
+	islands_off_our_coast_gan = {
+		picture = zuharra
+		potential = {
+			tag = GAN
+			NOT = { has_country_flag = colonize_islands_gan }
+		}
+		allow = {
+			invention = prophylaxis_against_malaria
+			invention = colonial_negotiations
+		}
+		effect = {
+			2508 = { secede_province = GAN add_core = GAN life_rating = 3}
+			1097 = { secede_province = GAN add_core = GAN life_rating = 3}
+			2535 = { secede_province = GAN add_core = GAN life_rating = 3}
+			2536 = { secede_province = GAN add_core = GAN life_rating = 3}
+			2534 = { secede_province = GAN add_core = GAN life_rating = 3}
+			2539 = { secede_province = GAN add_core = GAN life_rating = 3}
+			prestige = 5
+			set_country_flag = colonize_islands_gan
+		}
 	}
-}
+
+	kojonup_mine_gan = {
+		picture = normandie_mine
+		potential = {
+			owns = 2498
+			NOT = { has_country_flag = kojonup_mine_gan }
+		}
+		allow = {
+			cheap_iron = 1
+			invention = machine_tools
+		}
+		effect = {
+			2498 = { trade_goods = iron life_rating = 2 }
+			set_country_flag = kojonup_mine_gan
+		}	
+	}
 }

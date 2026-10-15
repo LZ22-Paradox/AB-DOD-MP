@@ -233,4 +233,88 @@ political_decisions = {
 			}
 		}
 	}
+
+	attract_immigrants_btv = {
+		picture = the_open_door
+		potential = {
+				OR = {
+					tag = BTV
+					tag = SAF
+				}
+				NOT = { has_country_flag = attract_immigrants_btv }
+			}
+		allow = {
+			romanticism = 1
+			medicine = 1
+		}
+		effect =  {
+			prestige = 5
+			add_country_modifier = {
+				name = the_homestead_act
+				duration = 3650
+			}
+			set_country_flag = attract_immigrants_btv
+		}
+	}
+
+	core_mozambique_btv = {
+		picture = map_africa
+		potential = {
+			OR = {
+				tag = BTV
+				tag = SAF
+			}
+			NOT = { has_country_flag = mozambique_core_btv }
+		}
+		allow = {
+			state_n_government = 1
+			medicine = 1
+		}
+		effect = {
+			2052 = { add_core = THIS}
+			2057 = { add_core = THIS}
+			2053 = { add_core = THIS}
+			2059 = { add_core = THIS}
+			2065 = { add_core = THIS}
+			2066 = { add_core = THIS}
+			2067 = { add_core = THIS}
+			2061 = { add_core = THIS}
+			2064 = { add_core = THIS}
+			2063 = { add_core = THIS}
+			2581 = { add_core = THIS}
+			2060 = { add_core = THIS}
+			badboy = 6
+			prestige = 2
+			set_country_flag = mozambique_core_btv
+		}
+	}
+
+	core_madagascar_btv = {
+		picture = sound_dues
+		potential = {
+			OR = {
+				tag = BTV
+				tag = SAF
+			}
+			NOT = { has_country_flag = madagascar_core_btv }
+		}
+		allow = {
+			has_country_flag = mozambique_core_btv
+			steamers = 1
+			nationalism_n_imperialism = 1
+		}
+		effect = {
+			2118 = { add_core = THIS}
+			2117 = { add_core = THIS}
+			2116 = { add_core = THIS}
+			2122 = { add_core = THIS}
+			2121 = { add_core = THIS}
+			2120 = { add_core = THIS}
+			2119 = { add_core = THIS}
+			2115 = { add_core = THIS}
+			badboy = 12
+			prestige = 5
+			set_country_flag = madagascar_core_btv
+		}
+	}
 }

@@ -71,6 +71,23 @@ political_decisions = {
 		}
 	}
 
+	sar_rush_milan = {
+		picture = garibaldi_redshirts
+		potential = {
+			tag = SAR
+			NOT = { has_country_flag = rush_milan }
+			NOT = { 726 = { owned_by = THIS } }
+		}
+		allow = {
+			year = 1830
+		}
+		effect = {
+			LOM = { all_core = { add_core = THIS } }
+			badboy = 20
+			set_country_flag = rush_milan
+		}
+	}
+
 	#Milan
 	form_lombardy_venetia_lom = {
 		potential = {
@@ -788,6 +805,24 @@ political_decisions = {
 				remove_core = DUA
 			}
 			set_global_flag = savoy_cores
+		}
+	}
+
+	carthago_delenda_est = {
+		picture = Roma
+		potential = {
+			tag = ITA
+			NOT = { has_country_flag = carthago_delenda_est_ita }
+		}
+		allow = { 
+			1725 = { owned_by = THIS } 
+		}
+		effect = {
+			749 = { life_rating = 3 }
+			1725 = { life_rating -3 }
+			badboy = 1
+			prestige = 15
+			set_country_flag = carthago_delenda_est_ita
 		}
 	}
 }
