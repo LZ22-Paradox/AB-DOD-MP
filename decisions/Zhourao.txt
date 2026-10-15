@@ -243,7 +243,7 @@ political_decisions = {
 			NOT = { has_country_flag = kojonup_mine_gan }
 		}
 		allow = {
-			cheap_iron = 1
+			puddling = 1
 			invention = machine_tools
 		}
 		effect = {
