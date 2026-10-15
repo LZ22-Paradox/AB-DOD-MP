@@ -1651,3 +1651,26 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = 998746
+	title = "998746.T"
+	desc = "998746.D"
+	picture = "Japanese_CHI"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "998476.A"
+		prestige = -25
+		any_owned = {
+			limit = {
+				is_core = CHI
+			}
+			remove_core = JAP
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
