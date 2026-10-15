@@ -2599,3 +2599,21 @@ new_city_development = {
 bureaucrats_fix_cooldown = {
 	icon = 12
 }
+
+####### AB-DOD-MP
+egy_revolutionary_reforms = { ## Research Bonus for 8~ Years
+	research_points_modifier = 0.3 # 30%
+	global_pop_militancy_modifier = 0.01
+	prestige = 0.01
+	icon = 3
+}
+
+balkans_in_harmony = {
+	global_pop_militancy_modifier = -0.05
+	prestige = 0.01
+}
+
+state_reform_boost = {
+    research_points_modifier = 0.05
+    education_efficiency_modifier = 0.2
+}

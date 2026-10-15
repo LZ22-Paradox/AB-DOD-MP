@@ -68,6 +68,7 @@ political_decisions = {
 		effect = {
 			set_country_flag = greece_reclaimed
 			GRE = { all_core = { add_core = THIS } }
+			badboy = 4
 		}
 	}
 
@@ -92,6 +93,7 @@ political_decisions = {
 		effect = {
 			set_country_flag = wallachia_reclaimed
 			WAL = { all_core = { add_core = THIS } }
+			badboy= 5
 		}
 	}
 
@@ -117,6 +119,7 @@ political_decisions = {
 				}
 			}
 			add_accepted_culture = albanian
+			badboy = 2
 		}
 	}
 
@@ -152,6 +155,7 @@ political_decisions = {
 				}
 			}
 			MON = { all_core = { add_core = THIS } }
+			badboy = 4
 		}
 	}
 
@@ -170,6 +174,7 @@ political_decisions = {
 		effect = {
 			set_country_flag = croatia_reclaimed
 			CRO = { all_core = { add_core = THIS } }
+			badboy = 4
 		}
 	}
 
@@ -189,6 +194,7 @@ political_decisions = {
 		effect = {
 			set_country_flag = invade_hungary
 			HUN = { all_core = { add_core = THIS } }
+			badboy = 8
 		}
 	}
 
@@ -287,6 +293,7 @@ political_decisions = {
 		effect = {
 			EGY = { all_core = { add_core = THIS } }
 			set_country_flag = tur_invade_egypt
+			badboy = 6
 		}
 	}
 
@@ -337,6 +344,7 @@ political_decisions = {
 					add_core = THIS
 				}
 			}
+			badboy = 5
 		}
 	}
 
@@ -371,6 +379,7 @@ political_decisions = {
 			add_accepted_culture = bedouin
 			MGH = { all_core = { add_core = THIS } }
 			TUN = { all_core = { add_core = THIS } }
+			badboy = 10
 		}
 	}
 
@@ -409,6 +418,7 @@ political_decisions = {
 			add_accepted_culture = ossetian
 			add_accepted_culture = crimean
 			add_accepted_culture = astrakhani
+			badboy = 10
 		}
 	}
 
@@ -445,6 +455,48 @@ political_decisions = {
 			add_accepted_culture = kirgiz
 			add_accepted_culture = oirat
 			add_accepted_culture = ugrian
+			badboy = 10
+		}
+	}
+
+	ottoman_dreadnought_tur = {
+		picture = new_life
+		potential = {
+			tag = TUR
+			NOT = { has_country_flag = ottoman_dreadnought_tur }
+		}
+		allow = {
+			invention = pre_dreadnought
+			any_greater_power = {
+				invention = pre_dreadnought
+				relation = { who = THIS value = 50 }
+			}
+		}
+		effect = {
+			set_country_flag = ottoman_dreadnought_tur
+			sub_unit = { type = dreadnought value = 860 }
+			money = -100000
+		}
+	}
+
+	reform_the_state_tur = {
+		potential = {
+			OR = {
+				tag = TUR
+				tag = RUS
+			}
+			NOT = { has_country_flag = reform_the_state }
+			state_n_government = 1
+		}
+		allow = {
+			empiricism = 1
+		}
+		effect = {
+			set_country_flag = reform_the_state
+			add_country_modifier = {
+				name = state_reform_boost
+				duration = 3650
+			}
 		}
 	}
 }

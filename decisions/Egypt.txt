@@ -56,6 +56,7 @@ political_decisions = {
       add_accepted_culture = maghrebi
       MGH = { all_core = { add_core = THIS } }
 	  TUN = { all_core = { add_core = THIS } }
+	  badboy = 10
     }
   }
 
@@ -167,6 +168,7 @@ political_decisions = {
 			add_accepted_culture = nilotic
 			add_accepted_culture = kikuyu
 			add_accepted_culture = swahili
+			badboy = 4
 		}
 	}
 
@@ -200,6 +202,7 @@ political_decisions = {
 			TUR_889 = { add_core = THIS }
 			add_core = 890
 			add_core = 892
+			badboy = 4
 		}
 	}
 
@@ -265,6 +268,57 @@ political_decisions = {
 			EGY_843 = { add_core = THIS }
 			TUR_855 = { add_core = THIS }
 			VEN_848 = { add_core = THIS }
+		}
+	}
+
+	wad_madani_coal = {
+		picture = normandie_mine
+		potential = {
+			1828 = { owned_by = THIS }
+			NOT = { has_country_flag = wadmadani_coal }
+		}
+		allow = {
+			puddling = 1
+			invention = machine_tools
+		} 
+		effect = {
+			1827 = { trade_goods = coal }
+			set_country_flag = wadmadani_coal
+		}
+	}
+
+	aswan_iron = {
+		picture = normandie_mine
+		potential = {
+			1766 = { owned_by = THIS }
+			NOT = { has_country_flag = aswan_iron_mine }
+		}
+		allow = {
+			hot_blast = 1
+			invention = machine_tools
+		}
+		effect = {
+			1766 = { trade_goods = iron }
+			set_country_flag =  aswan_iron_mine
+		}
+	}
+
+	revolutionary_reforms_egy = {
+		picture = names_of_the_rev
+		potential = {
+			tag = EGY
+			civilized = no
+			NOT = { has_country_flag = egy_revolutionary_reforms }
+		}
+		allow = {
+			NOT = { year = 1840 }
+		}
+		effect = {
+			add_country_modifier = {
+				name = egy_revolutionary_reforms
+				duration = 2920
+			}
+			set_country_flag = egy_revolutionary_reforms
 		}
 	}
 }
