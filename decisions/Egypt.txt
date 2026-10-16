@@ -56,7 +56,7 @@ political_decisions = {
       add_accepted_culture = maghrebi
       MGH = { all_core = { add_core = THIS } }
 	  TUN = { all_core = { add_core = THIS } }
-	  badboy = 10
+	  badboy = 4
     }
   }
 
